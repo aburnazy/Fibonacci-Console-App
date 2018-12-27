@@ -15,7 +15,7 @@ namespace Tests
             foreach (var fibNumber in fibonacciGenerator.Generate(expectedValues.Length))
             {
                 Assert.AreEqual(fibNumber, expectedValues[i++]);
-            }
+            }           
         }
     }
 }

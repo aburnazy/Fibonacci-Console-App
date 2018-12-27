@@ -9,12 +9,11 @@ namespace App
         {
             string input = null;
 
-            while (!"exit".Equals(input, StringComparison.OrdinalIgnoreCase))
+            while (!"exit".Equals(input, comparisonType: StringComparison.OrdinalIgnoreCase))
             {
                 Console.Write("Please enter a value (or exit to terminate the program): ");
                 input = Console.ReadLine();
-                int number;
-                if (int.TryParse(input, out number))
+                if (int.TryParse(input, out var number))
                 {
                     Console.WriteLine($"---------------- First {number} fibonacci values are -----------------");
                     FibonacciGenerator fibonacciGenerator = new FibonacciGenerator();
