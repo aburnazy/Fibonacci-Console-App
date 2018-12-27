@@ -9,7 +9,7 @@ namespace App
         {
             string input = null;
 
-            while (!"exit".Equals(input))
+            while (!"exit".Equals(input, StringComparison.OrdinalIgnoreCase))
             {
                 Console.Write("Please enter a value (or exit to terminate the program): ");
                 input = Console.ReadLine();
