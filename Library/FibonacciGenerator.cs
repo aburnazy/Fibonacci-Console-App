@@ -6,11 +6,11 @@ namespace Library
 {
     public class FibonacciGenerator
     {
-        private Dictionary<int, int> _cache = new Dictionary<int, int>();
+        private Dictionary<Int64, Int64> _cache = new Dictionary<Int64, Int64>();
 
-        private int Fibonacci(int number) => number < 2 ? number : FibonacciValue(number - 1) + FibonacciValue(number - 2);
+        private Int64 Fibonacci(int number) => number < 2 ? number : FibonacciValue(number - 1) + FibonacciValue(number - 2);
 
-        private int FibonacciValue(int number)
+        private Int64 FibonacciValue(int number)
         {
             if (!_cache.ContainsKey(number))
             {
@@ -20,7 +20,7 @@ namespace Library
             return _cache[number];
         }
 
-        public IEnumerable<int> Generate(int number)
+        public IEnumerable<Int64> Generate(int number)
         {
             for (int i=0; i<number; i++)
             {
